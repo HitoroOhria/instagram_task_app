@@ -45,7 +45,6 @@ end
 group :production do
   gem 'pg',  '0.20.0'
   gem 'fog', '1.42'
-  gem 'fog-vsphere', '3.2.5'
 end
 
 gem 'bootstrap-sass'
