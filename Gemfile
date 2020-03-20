@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 gem 'rails',                   '~> 5.1.1'
 gem 'puma',                    '~> 3.7'
 gem 'sassc-rails'
@@ -19,9 +18,10 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'sprockets',               '~> 3.0'
+gem 'mysql2'
+
 
 group :development, :test do
-  gem 'sqlite3',      '1.3.13'
   gem 'rspec-rails', '~> 3.9.0'
   gem 'factory_bot_rails', '~>4.10.0'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -42,8 +42,11 @@ group :development do
   gem 'spring-commands-rspec'
 end
 
+group :production, :staging do
+    gem 'unicorn'
+end
+
 group :production do
-  gem 'pg',  '0.20.0'
   gem 'fog', '1.42'
 end
 
