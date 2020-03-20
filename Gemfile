@@ -42,8 +42,12 @@ group :development do
   gem 'spring-commands-rspec'
 end
 
+group :production, :staging do
+    gem 'unicorn'
+end
+
 group :production do
-  gem 'pg',  '0.20.0'
+  gem 'mysql2'
   gem 'fog', '1.42'
 end
 
