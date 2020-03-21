@@ -15,5 +15,9 @@ test:
 
 production:
   <<: *default
-  database: instagram_task_app
-  socket:   /var/lib/mysql/mysql.sock
+  username: hiroto
+  password: foobar
+  database: potepan_task 
+  socket:   /var/lib/mysql/mysql.sock  
+  host:     potepan-task-web.cxz8cbm3fpx0.ap-northeast-1.rds.amazonaws.com
+  port:     3306
