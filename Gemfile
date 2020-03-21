@@ -47,6 +47,10 @@ group :production, :staging do
 end
 
 group :production do
+<<<<<<< HEAD
+=======
+  gem 'mysql2'
+>>>>>>> 465729f52a7ffcae801b70ad7c7325824f3e4a63
   gem 'fog', '1.42'
 end
 
