@@ -15,9 +15,9 @@ test:
 
 production:
   <<: *default
-  username: hiroto
+  username: <%= ENV['DB_USERNAME'] %>
   password: foobar
-  database: potepan_task 
+  database: potepan_task
   socket:   /var/lib/mysql/mysql.sock  
   host:     potepan-task-web.cxz8cbm3fpx0.ap-northeast-1.rds.amazonaws.com
-  port:     3306
+  port:     <%= ENV['DB_PORT'] %>
