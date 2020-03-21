@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<!--@feed_itemsのmicropostオブジェクトがeachで取り出され、|micropost|に格納される-->
+
+>>>>>>> origin/for-work
 <li id="micropost-<%= micropost.id %>">
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
@@ -7,9 +12,20 @@
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+<<<<<<< HEAD
+=======
+    <%= link_to "reply", new_micropost_comment_path(micropost) %>
+>>>>>>> origin/for-work
     <% if current_user?(micropost.user) %>
       <%= link_to "delete", micropost, method: :delete,
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>
+<<<<<<< HEAD
 </li>
+=======
+</li>
+
+<% reply_items = micropost.comments.reverse %>
+<%= render reply_items if not reply_items.empty? %>
+>>>>>>> origin/for-work

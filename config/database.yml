@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SQLite version 3.x
 #   gem install sqlite3
 #
@@ -23,3 +24,28 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+=======
+default: &default
+  adapter: mysql2
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: root
+  password:
+
+development:
+  <<: *default
+  database: instagram_task_app_development
+
+test:
+  <<: *default
+  database: instagram_task_app_test
+
+production:
+  <<: *default
+  username: <%= ENV['DB_USERNAME'] %>
+  password: foobar
+  database: potepan_task
+  socket:   /var/lib/mysql/mysql.sock  
+  host:     potepan-task-web.cxz8cbm3fpx0.ap-northeast-1.rds.amazonaws.com
+  port:     <%= ENV['DB_PORT'] %>
+>>>>>>> origin/for-work
