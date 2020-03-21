@@ -30,4 +30,18 @@ user  = users.first
 following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
+<<<<<<< HEAD
 followers.each { |follower| follower.follow(user) }
+=======
+followers.each { |follower| follower.follow(user) }
+
+# コメント
+users = User.order(:created_at).take(3)
+microposts = Micropost.order(:created_at).take(6)
+users.each do |user|
+  microposts.each do |micropost|
+    message = Faker::Lorem.sentence(2)
+    micropost.comments.create!(message: message, user_id: user.id)
+  end
+end
+>>>>>>> origin/for-work
