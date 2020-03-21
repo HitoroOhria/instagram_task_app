@@ -4,7 +4,7 @@ Email：foobar@foobar.com
 Password：foobar  
 
 ・本番環境  
-https://www.napolitancoffe.work  
+http://www.napolitancoffe.work  
 
 １，実装概要  
 Railsチュートリアル2周目もかねてアプリの下地を作成し、  
